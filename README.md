@@ -8,7 +8,14 @@ Beware of the license since this is essentially Linux.
 ```
 git clone --depth=1 https://github.com/lkl/linux.git
 make -C tools/lkl
+ar rcs liblinux.a tools/lkl/lib/lkl.o
 ```
+
+To link against it in your application you can add
+```
+println!("cargo:rustc-link-lib=static=linux");
+```
+during the build.
 
 # Dependencies & Testing
 For running the tests of lkl some python packages are required:
