@@ -1,0 +1,15 @@
+[package]
+name = "lkl"
+version = "0.0.1"
+authors = ["Gerd Zellweger <mail@gerdzellweger.com>"]
+edition = "2018"
+description = "Linux kernel as a crate"
+readme = "README.md"
+license = "GPLv2"
+build = "build.rs"
+homepage = "https://github.com/gz/rust-lkl"
+repository = "https://github.com/gz/rust-lkl"
+
+[build-dependencies]
+num_cpus = "1.9"
+# #2589: bindgen = "0.*"
